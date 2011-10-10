@@ -36,7 +36,9 @@ fi
   echo "80" > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
   echo "120000" > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
 
-
+# SD cards (mmcblk) read ahead tweaks
+  echo "256" > /sys/devices/virtual/bdi/179:0/read_ahead_kb
+  echo "256" > /sys/devices/virtual/bdi/179:16/read_ahead_kb
 
 ##### Post-init phase #####
 sleep 12
