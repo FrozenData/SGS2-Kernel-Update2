@@ -32,4 +32,8 @@ fi
   echo "1000" > /proc/sys/vm/dirty_expire_centisecs
   echo "0" > /proc/sys/vm/swappiness
 
+# Ondemand CPU governor tweaks
+  echo "80" > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
+  echo "120000" > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
+
 
