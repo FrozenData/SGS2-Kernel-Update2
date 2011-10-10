@@ -26,4 +26,10 @@ fi
     echo "2" > $i/queue/iosched/back_seek_penalty
     echo "1000000000" > $i/queue/iosched/back_seek_max
   done
+  
+# Miscellaneous tweaks
+  echo "2000" > /proc/sys/vm/dirty_writeback_centisecs
+  echo "1000" > /proc/sys/vm/dirty_expire_centisecs
+  echo "0" > /proc/sys/vm/swappiness
+
 
