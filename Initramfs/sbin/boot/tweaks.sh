@@ -37,3 +37,10 @@ fi
   echo "120000" > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
 
 
+
+##### Post-init phase #####
+sleep 12
+
+# Cleanup busybox
+  #/sbin/busybox rm /sbin/busybox
+  /sbin/busybox mount rootfs -o remount,ro
